@@ -6,24 +6,10 @@ A: If you instantiate WidgetConsumer using the default constructor
    consumer.consume();  // Throws NPE
 
 Q: How would you fix it?
-A: Best answer: Add a getProducer() getter that creates a producer 
-   if one doesn't already exist:
-
-   WidgetProducer getProducer() {
-
-        if (producer == null) {
-            producer = new WidgetProducer();
-        }
-
-        return producer;
-   }
-
-   Then change Line 31 to call the getter
-
+A: Just create it in the default constructor
    Other options:
    - check for null before Line 31 (weakest)
    - wrap Line 31 in a try/catch block
-   - add a call to create a producer to the default constructor
 
 Q: Are you familar with Test-Driven Development (TDD)?
    If the answer is yes:
