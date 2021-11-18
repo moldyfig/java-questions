@@ -1,4 +1,4 @@
-packae org.moldyfig.widgets;
+package org.moldyfig.widgets;
 
 public class WidgetConsumer {
 
