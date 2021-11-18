@@ -20,7 +20,7 @@ public class WidgetConsumer {
         this.name = name;
     }
 
-    public String getName(String name) {
+    public String getName() {
         return name;
     }
 
@@ -28,6 +28,7 @@ public class WidgetConsumer {
 
         int processed = 0;
 
+        // Assume WidgetProducer implements Iterable
         Iterator<Widget> it = producer.iterator();
         while (it.hasNext()) {
             Widget widget = it.next();
